@@ -1,8 +1,7 @@
-import { motion } from 'framer-motion';
-import { Moon, Sun } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
-const Navbar = ({ theme, toggleTheme }) => {
+const Navbar = ({ theme, toggleTheme, currentPath }) => {
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
@@ -20,108 +19,75 @@ const Navbar = ({ theme, toggleTheme }) => {
             width: '100%', 
             zIndex: 100, 
             padding: scrolled ? '1rem 0' : '1.5rem 0',
-            transition: 'padding 0.3s ease'
+            transition: 'padding 0.3s ease',
+            borderBottom: '1px solid rgba(255,255,255,0.05)',
+            background: 'rgba(0,0,0,0.5)',
+            backdropFilter: 'blur(20px)'
         }}>
-            <div className="container" style={{ display: 'flex', justifyContent: 'center', position: 'relative' }}>
+            <div className="container" style={{ display: 'flex', justifyContent: 'center', position: 'relative', alignItems: 'center' }}>
                 
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    style={{ position: 'absolute', left: '1.5rem', fontWeight: 800, fontSize: '1.4rem', color: 'var(--text-primary)', letterSpacing: '-0.5px' }}
+                    style={{ position: 'absolute', left: '1.5rem', fontWeight: 700, fontSize: '1.5rem', color: 'var(--text-primary)', letterSpacing: '-0.5px' }}
                 >
-                    PS.
+                    P. Singh
                 </motion.div>
 
-                {/* Centered nav links */}
                 <motion.ul
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     style={{ 
                         display: 'flex', 
-                        gap: '0.8rem', 
+                        gap: '2rem', 
                         margin: 0, 
-                        padding: '0.4rem 1rem', 
+                        padding: '0', 
                         alignItems: 'center',
-                        background: 'var(--glass-bg)',
-                        border: '1px solid var(--glass-border)',
-                        borderRadius: '999px',
-                        backdropFilter: 'blur(16px)'
                     }}
                 >
-                    {['About', 'Projects', 'Achievements', 'Experience', 'Certifications', 'Contact'].map((item) => (
+                    {['Home', 'Skills', 'Experience', 'Projects', 'Certifications', 'Achievements', 'Contact'].map((item) => {
+                        const hrefTarget = item === 'Home' ? '#home' : `#${item.toLowerCase()}`;
+                        return (
                         <li key={item}>
                             <a 
-                              href={`#${item.toLowerCase()}`} 
+                              href={currentPath === '#resume' ? `/${hrefTarget}` : hrefTarget} 
                               style={{ 
-                                  fontWeight: 500, 
-                                  fontSize: '0.85rem', 
-                                  color: 'var(--text-secondary)',
-                                  padding: '0.5rem 0.8rem',
-                                  borderRadius: '999px',
-                                  display: 'block',
-                                  transition: 'all 0.3s ease'
+                                  fontWeight: 400, 
+                                  fontSize: '0.95rem', 
+                                  color: 'var(--text-primary)',
+                                  transition: 'color 0.3s ease'
                               }}
                               onMouseOver={(e) => {
-                                e.currentTarget.style.color = 'var(--text-primary)';
-                                e.currentTarget.style.background = 'rgba(56,189,248,0.1)';
+                                e.currentTarget.style.color = 'var(--accent-color)';
                               }}
                               onMouseOut={(e) => {
-                                e.currentTarget.style.color = 'var(--text-secondary)';
-                                e.currentTarget.style.background = 'transparent';
+                                e.currentTarget.style.color = 'var(--text-primary)';
                               }}
                             >
                                 {item}
                             </a>
                         </li>
-                    ))}
+                    )})}
                     <li>
                         <a 
                             href="#resume" 
                             style={{ 
-                                fontWeight: 700, 
-                                fontSize: '0.85rem', 
-                                color: 'var(--text-primary)',
-                                background: 'var(--accent-color)',
-                                padding: '0.5rem 1rem',
-                                borderRadius: '999px',
-                                display: 'block',
-                                marginLeft: '0.5rem',
-                                transition: 'all 0.3s ease'
+                                fontWeight: 400, 
+                                fontSize: '0.95rem', 
+                                color: currentPath === '#resume' ? 'var(--accent-color)' : 'var(--text-primary)',
+                                transition: 'color 0.3s ease'
                             }}
                             onMouseOver={(e) => {
-                                e.currentTarget.style.transform = 'scale(1.05)';
+                                e.currentTarget.style.color = 'var(--accent-color)';
                             }}
                             onMouseOut={(e) => {
-                                e.currentTarget.style.transform = 'scale(1)';
+                                e.currentTarget.style.color = currentPath === '#resume' ? 'var(--accent-color)' : 'var(--text-primary)';
                             }}
                         >
                             Resume
                         </a>
                     </li>
                 </motion.ul>
-
-                <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    style={{ position: 'absolute', right: '1.5rem' }}
-                >
-                    <button onClick={toggleTheme} style={{ 
-                        background: 'var(--glass-bg)', 
-                        border: '1px solid var(--glass-border)', 
-                        cursor: 'pointer', 
-                        color: 'var(--text-primary)', 
-                        display: 'flex', 
-                        alignItems: 'center', 
-                        padding: '0.6rem',
-                        borderRadius: '50%',
-                        transition: 'all 0.3s ease'
-                    }}
-                    onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
-                    onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-                    >
-                        {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-                    </button>
-                </motion.div>
             </div>
         </nav>
     );
