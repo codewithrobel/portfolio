@@ -9,10 +9,10 @@ const Contact = () => {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    style={{ textAlign: 'center', marginBottom: '4rem' }}
+                    style={{ textAlign: 'center' }}
                 >
-                    <h2 className="section-title">Let's <span className="text-gradient">Connect</span></h2>
-                    <p className="section-subtitle">Reach out if you want to collaborate or just say hi.</p>
+                    <h2 className="section-title">Let's <span className="accent">Connect</span></h2>
+                    <div className="title-underline"></div>
                 </motion.div>
 
                 <div className="grid-responsive contact-grid">

@@ -15,7 +15,7 @@ const Hero = () => {
           </div>
           <h1 style={{ fontSize: '3.5rem', fontWeight: 800, lineHeight: 1.2, marginBottom: '1rem', color: 'var(--text-primary)' }}>
             Hi, I'm <br/>
-            <span className="text-gradient">Priyanshu Singh.</span>
+            <span className="accent">Priyanshu Singh.</span>
           </h1>
           <h2 style={{ fontSize: '1.5rem', fontWeight: 500, color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
             Creative Developer & Tech Enthusiast
@@ -56,7 +56,7 @@ const Hero = () => {
            style={{ display: 'flex', justifyContent: 'center', position: 'relative' }}
         >
            {/* Glowing background ring */}
-           <div style={{ position: 'absolute', width: '100%', height: '100%', borderRadius: '50%', background: 'var(--text-gradient)', filter: 'blur(30px)', opacity: 0.4, zIndex: -1 }}></div>
+           <div style={{ position: 'absolute', width: '100%', height: '100%', borderRadius: '50%', background: 'var(--accent-color)', filter: 'blur(50px)', opacity: 0.3, zIndex: -1 }}></div>
 
            <div style={{ width: '100%', maxWidth: '450px', aspectRatio: '1/1', borderRadius: '50%', background: 'var(--glass-bg)', overflow: 'hidden', border: '4px solid var(--bg-color)', boxShadow: '0 0 0 2px var(--accent-color)' }}>
               <img

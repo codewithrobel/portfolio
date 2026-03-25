@@ -27,10 +27,10 @@ const Certificates = () => {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    style={{ textAlign: 'center', marginBottom: '4rem' }}
+                    style={{ textAlign: 'center' }}
                 >
-                    <h2 className="section-title">My <span className="text-gradient">Certifications</span></h2>
-                    <p className="section-subtitle">Professional courses and skill validations</p>
+                    <h2 className="section-title">My <span className="accent">Certifications</span></h2>
+                    <div className="title-underline"></div>
                 </motion.div>
 
                 <div className="grid-responsive" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>

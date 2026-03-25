@@ -9,10 +9,10 @@ const About = () => {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    style={{ textAlign: 'center', marginBottom: '4rem' }}
+                    style={{ textAlign: 'center' }}
                 >
-                    <h2 className="section-title">About <span className="text-gradient">Me</span></h2>
-                    <p className="section-subtitle">Get to know more about my background and approach</p>
+                    <h2 className="section-title">About <span className="accent">Me</span></h2>
+                    <div className="title-underline"></div>
                 </motion.div>
 
                 <div className="grid-responsive about-grid">

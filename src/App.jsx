@@ -9,6 +9,7 @@ import Projects from './components/Projects';
 import Certificates from './components/Certificates';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ParticlesBackground from './components/ParticlesBackground';
 import './index.css';
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
   return (
     <>
       <Navbar theme={theme} toggleTheme={toggleTheme} />
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1 }}>
+        <ParticlesBackground theme={theme} />
+      </div>
       <main>
         <Hero />
         <About />

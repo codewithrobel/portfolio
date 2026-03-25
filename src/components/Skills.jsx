@@ -32,10 +32,10 @@ const Skills = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            style={{ textAlign: 'center', marginBottom: '4rem' }}
+            style={{ textAlign: 'center' }}
         >
-          <h2 className="section-title">Technical <span className="text-gradient">Skills</span></h2>
-          <p className="section-subtitle">Technologies and tools I work with daily</p>
+          <h2 className="section-title">Technical <span className="accent">Skills</span></h2>
+          <div className="title-underline"></div>
         </motion.div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>

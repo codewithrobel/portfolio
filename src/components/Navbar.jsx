@@ -82,8 +82,8 @@ const Navbar = ({ theme, toggleTheme }) => {
                             style={{ 
                                 fontWeight: 700, 
                                 fontSize: '0.85rem', 
-                                color: 'var(--bg-color)',
-                                background: 'var(--text-gradient)',
+                                color: 'var(--text-primary)',
+                                background: 'var(--accent-color)',
                                 padding: '0.5rem 1rem',
                                 borderRadius: '999px',
                                 display: 'block',

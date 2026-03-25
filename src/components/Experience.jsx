@@ -41,10 +41,10 @@ const Experience = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            style={{ textAlign: 'center', marginBottom: '4rem' }}
+            style={{ textAlign: 'center' }}
         >
-          <h2 className="section-title">Education & <span className="text-gradient">Experience</span></h2>
-          <p className="section-subtitle">A brief look at my academic and professional timeline</p>
+          <h2 className="section-title">Education & <span className="accent">Experience</span></h2>
+          <div className="title-underline"></div>
         </motion.div>
           
         <div style={{ maxWidth: '800px', margin: '0 auto', position: 'relative' }}>
