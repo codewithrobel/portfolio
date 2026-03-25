@@ -3,36 +3,28 @@ import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 
 const projects = [
     {
-        title: 'Environmental Dashboard',
-        description: 'Interactive web dashboard to visualize district-wise environmental metrics using maps and modular analytics components.',
-        tech: ['React', 'Leaflet', 'Vite'],
+        title: 'Environmental Monitoring Dashboard',
+        description: 'Interactive web dashboard to visualize district-wise environmental metrics for North-Eastern India using Leaflet maps and modular analytics.',
+        tech: ['React', 'JavaScript', 'Leaflet', 'Vite'],
         github: 'https://github.com/codewithrobel',
         live: '#',
         image: 'https://images.unsplash.com/photo-1618044733300-9472054094ee?q=80&w=800&auto=format&fit=crop'
     },
     {
-        title: 'Border Crossing Data',
-        description: 'Exploratory analysis and visualization on U.S. border-crossing datasets to uncover trends using heatmaps.',
-        tech: ['Python', 'Pandas', 'Seaborn'],
+        title: 'Border Crossing Data Analysis & Prediction',
+        description: 'Exploratory analysis and visualization on U.S. border-crossing datasets using bar charts, histograms, and heatmaps to uncover trends.',
+        tech: ['Python', 'Pandas', 'Seaborn', 'Scikit-Learn'],
         github: 'https://github.com/codewithrobel',
         live: '#',
         image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop'
     },
     {
-        title: 'Shopping E-Commerce',
-        description: 'Responsive multi-page eyewear e-commerce website incorporating modern UI/UX principles and interactive displays.',
+        title: 'Shopping E-Commerce Website',
+        description: 'Responsive multi-page eyewear e-commerce website incorporating modern UI/UX principles and interactive product displays with SheryJS.',
         tech: ['HTML', 'CSS', 'JavaScript'],
         github: 'https://github.com/codewithrobel',
         live: '#',
         image: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=800&auto=format&fit=crop'
-    },
-    {
-        title: 'IoT Home Automation',
-        description: 'A smart home solution integrating IoT sensors to control lighting and monitor temperature efficiently.',
-        tech: ['C++', 'Arduino', 'IoT'],
-        github: 'https://github.com/codewithrobel',
-        live: '#',
-        image: 'https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800&auto=format&fit=crop'
     }
 ];
 

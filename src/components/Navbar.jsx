@@ -38,7 +38,7 @@ const Navbar = ({ theme, toggleTheme }) => {
                     animate={{ opacity: 1, y: 0 }}
                     style={{ 
                         display: 'flex', 
-                        gap: '1rem', 
+                        gap: '0.8rem', 
                         margin: 0, 
                         padding: '0.4rem 1rem', 
                         alignItems: 'center',
@@ -48,17 +48,18 @@ const Navbar = ({ theme, toggleTheme }) => {
                         backdropFilter: 'blur(16px)'
                     }}
                 >
-                    {['About', 'Projects', 'Experience', 'Contact'].map((item) => (
+                    {['About', 'Projects', 'Achievements', 'Experience', 'Certifications', 'Contact'].map((item) => (
                         <li key={item}>
                             <a 
                               href={`#${item.toLowerCase()}`} 
                               style={{ 
                                   fontWeight: 500, 
-                                  fontSize: '0.9rem', 
+                                  fontSize: '0.85rem', 
                                   color: 'var(--text-secondary)',
-                                  padding: '0.5rem 1rem',
+                                  padding: '0.5rem 0.8rem',
                                   borderRadius: '999px',
-                                  display: 'block'
+                                  display: 'block',
+                                  transition: 'all 0.3s ease'
                               }}
                               onMouseOver={(e) => {
                                 e.currentTarget.style.color = 'var(--text-primary)';
@@ -73,6 +74,25 @@ const Navbar = ({ theme, toggleTheme }) => {
                             </a>
                         </li>
                     ))}
+                    <li>
+                        <a 
+                            href="/Priyanshu_Singh_Resume.pdf" 
+                            target="_blank"
+                            rel="noreferrer"
+                            style={{ 
+                                fontWeight: 700, 
+                                fontSize: '0.85rem', 
+                                color: 'var(--bg-color)',
+                                background: 'var(--text-gradient)',
+                                padding: '0.5rem 1rem',
+                                borderRadius: '999px',
+                                display: 'block',
+                                marginLeft: '0.5rem'
+                            }}
+                        >
+                            Resume
+                        </a>
+                    </li>
                 </motion.ul>
 
                 <motion.div

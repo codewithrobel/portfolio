@@ -2,28 +2,40 @@ import { motion } from 'framer-motion';
 
 const timeline = [
   {
-    year: '2023 - Present',
-    role: 'Freelance Software Developer',
-    company: 'Self-Employed',
-    desc: 'Building modern web applications and providing data analysis services for diverse clients.',
+    year: 'May 2025 - Present',
+    role: 'Social Media Head',
+    company: 'InnovXus',
+    desc: 'Leading the social media and digital presence initiatives.',
   },
   {
-    year: '2021 - 2025',
-    role: 'B.Tech in Computer Science',
-    company: 'University Name',
-    desc: 'Focusing on core computer science subjects, algorithms, and software engineering principles.',
+    year: 'Aug 2024 - Present',
+    role: 'B.Tech - Information Technology',
+    company: 'Lovely Professional University (Phagwara, Punjab)',
+    desc: 'Pursuing my Bachelor of Technology focused on core algorithms, software engineering, and modern development.',
   },
   {
-    year: '2022',
-    role: 'Web Development Intern',
-    company: 'Tech Solutions Inc.',
-    desc: 'Assisted in building responsive frontend interfaces using React and modern CSS frameworks.',
+    year: 'May 2024 - Mar 2025',
+    role: 'Social Media Manager',
+    company: 'VentureSpace',
+    desc: 'Managed community engagement and social outreach campaigns.',
+  },
+  {
+    year: 'Apr 2020 - Mar 2022',
+    role: 'Diploma',
+    company: 'Govt Polytechnic College (Sonbhadra, UP)',
+    desc: 'Completed technical diploma with 72%.',
+  },
+  {
+    year: 'Apr 2018 - Mar 2019',
+    role: 'Matriculation',
+    company: 'KBM Vidyalaya (Mirzapur, UP)',
+    desc: 'Completed secondary education with 71%.',
   }
 ];
 
 const Experience = () => {
   return (
-    <section id="experience" className="section">
+    <section id="education" className="section">
       <div className="container">
         <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -31,8 +43,8 @@ const Experience = () => {
             viewport={{ once: true }}
             style={{ textAlign: 'center', marginBottom: '4rem' }}
         >
-          <h2 className="section-title">My <span className="text-gradient">Journey</span></h2>
-          <p className="section-subtitle">A brief look at my professional timeline</p>
+          <h2 className="section-title">Education & <span className="text-gradient">Experience</span></h2>
+          <p className="section-subtitle">A brief look at my academic and professional timeline</p>
         </motion.div>
           
         <div style={{ maxWidth: '800px', margin: '0 auto', position: 'relative' }}>
