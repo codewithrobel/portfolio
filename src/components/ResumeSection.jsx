@@ -26,24 +26,23 @@ const ResumeSection = () => {
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1.5rem 2rem', borderBottom: '1px solid var(--glass-border)', background: 'var(--bg-secondary)' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', color: 'var(--text-primary)' }}>
                             <FileImage size={24} className="accent" />
-                            <h3 style={{ fontSize: '1.2rem', fontWeight: 600 }}>Priyanshu_Singh_Resume</h3>
+                            <h3 style={{ fontSize: '1.2rem', fontWeight: 600 }}>Priyanshu_Singh_Resume.pdf</h3>
                         </div>
-                        <a href="/resume.png" download="Priyanshu_Singh_Resume.png" target="_blank" rel="noreferrer" className="btn btn-primary" style={{ padding: '0.6rem 1.5rem', fontSize: '0.9rem' }}>
+                        <a href="/priyanshufinalcvfinalll.pdf" download="Priyanshu_Singh_Resume.pdf" target="_blank" rel="noreferrer" className="btn btn-primary" style={{ padding: '0.6rem 1.5rem', fontSize: '0.9rem' }}>
                             <Download size={16} /> Download
                         </a>
                     </div>
                     
-                    <div style={{ width: '100%', background: '#050505', display: 'flex', justifyContent: 'center', padding: '2rem' }}>
-                        <img 
-                            src="/resume.png" 
-                            alt="Resume of Priyanshu Singh" 
+                    <div style={{ width: '100%', height: '850px', background: '#050505', display: 'flex', justifyContent: 'center' }}>
+                        <iframe 
+                            src="/priyanshufinalcvfinalll.pdf" 
+                            title="Resume Document" 
                             style={{ 
-                                maxWidth: '100%', 
-                                maxHeight: '900px',
-                                objectFit: 'contain', 
-                                border: '1px solid var(--glass-border)', 
-                                borderRadius: '12px',
-                                boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+                                width: '100%', 
+                                height: '100%',
+                                border: 'none', 
+                                borderBottomLeftRadius: '24px',
+                                borderBottomRightRadius: '24px'
                             }} 
                         />
                     </div>
