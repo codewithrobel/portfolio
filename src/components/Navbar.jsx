@@ -76,9 +76,7 @@ const Navbar = ({ theme, toggleTheme }) => {
                     ))}
                     <li>
                         <a 
-                            href="/Priyanshu_Singh_Resume.pdf" 
-                            target="_blank"
-                            rel="noreferrer"
+                            href="#resume" 
                             style={{ 
                                 fontWeight: 700, 
                                 fontSize: '0.85rem', 
@@ -87,7 +85,14 @@ const Navbar = ({ theme, toggleTheme }) => {
                                 padding: '0.5rem 1rem',
                                 borderRadius: '999px',
                                 display: 'block',
-                                marginLeft: '0.5rem'
+                                marginLeft: '0.5rem',
+                                transition: 'all 0.3s ease'
+                            }}
+                            onMouseOver={(e) => {
+                                e.currentTarget.style.transform = 'scale(1.05)';
+                            }}
+                            onMouseOut={(e) => {
+                                e.currentTarget.style.transform = 'scale(1)';
                             }}
                         >
                             Resume

@@ -28,8 +28,8 @@ const Hero = () => {
             <a href="#contact" className="btn btn-primary">
               Hit me up <Mail size={18} />
             </a>
-            <a href="/Priyanshu_Singh_Resume.pdf" target="_blank" rel="noreferrer" className="btn btn-outline">
-              Download Resume
+            <a href="#resume" className="btn btn-outline">
+              View Resume
             </a>
           </div>
 
